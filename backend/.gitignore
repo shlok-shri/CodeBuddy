@@ -1,0 +1,53 @@
+# Node modules
+node_modules/
+**/node_modules/
+
+# Build output
+dist/
+build/
+out/
+.temp/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Environment variables
+.env
+.env.*.local
+.env.local
+
+# Editor-specific
+.vscode/
+.idea/
+*.swp
+
+# Local credentials
+geminiCredentials.json
+
+# Testing
+coverage/
+*.lcov
+
+# Parcel / Vite
+.cache/
+.vite/
+
+# Optional: MongoDB dump
+dump/
+
+# Optional: uploads/static files
+uploads/
+public/uploads/

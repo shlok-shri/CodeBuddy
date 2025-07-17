@@ -1,0 +1,14 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+.scroll{
+    scrollbar-width: thin;
+    scrollbar-color: #4b5563 transparent;
+    &::-webkit-scrollbar {
+        visibility: hidden;
+    }
+}
+
+* {
+    font-family: "Roboto", sans-serif;
+}
