@@ -173,12 +173,12 @@ const ProjectUI = () => {
     if (!project) return;
 
     if (!webContainer) {
-      getWebContainer().then(container => {
-        setWebContainer(container);
-        console.log('WebContainer initialized:', container);
-        container.on('error', (err) => console.error('WebContainer error:', err));
-      }).catch(err => console.error('Failed to initialize WebContainer:', err));
-    }
+    getWebContainer().then(container => {
+      setWebContainer(container);
+      console.log('WebContainer initialized:', container);
+      container.on('error', (err) => console.error('WebContainer error:', err));
+    }).catch(err => console.error('Failed to initialize WebContainer:', err));
+  }
 
     initializeSocket(project._id);
     receiveMessage('project-message', data => {
