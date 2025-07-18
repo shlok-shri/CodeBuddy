@@ -10,7 +10,9 @@ import aiRoutes from './routes/ai.routes.js'
 connect()
 const app = express()
 
-app.use(cors()) //only for testing, abhi koi bhi access kar sakta hai
+app.use(cors({
+  origin: 'https://code-buddy-c999.vercel.app'
+})); //only for testing, abhi koi bhi access kar sakta hai
 app.use(cookieParser())
 app.use(morgan('dev'))
 app.use(express.json())
