@@ -23,7 +23,7 @@
       "headers": [
         {
           "key": "Access-Control-Allow-Origin",
-          "value": "https://code-buddy-client.vercel.app"
+          "value": "https://code-buddy-client.vercel.app, http://localhost:5173"
         },
         {
           "key": "Access-Control-Allow-Methods",

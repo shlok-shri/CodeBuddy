@@ -15,6 +15,8 @@ const io = new Server(server,{
     }
 });
 
+const socket = io("wss://zenspace-backend.onrender.com");
+
 io.use(async (socket, next) => {
     try {
         
