@@ -16,6 +16,11 @@ app.use(cors({
   origin: allowedOrigins,
   credentials: true, // if using cookies or auth headers
 }));
+app.use((req, res, next) => {
+  res.setHeader('Cross-Origin-Embedder-Policy', 'require-corp')
+  res.setHeader('Cross-Origin-Opener-Policy', 'same-origin')
+  next()
+})
 app.use(cookieParser())
 app.use(morgan('dev'))
 app.use(express.json())
