@@ -18,7 +18,8 @@ const Register = () => {
         axios.post('/users/register', {
             email,
             password
-        })
+        },
+         {withCredentials: true})
         .then((res) => {
             console.log(res.data);
             localStorage.setItem('token', res.data.token)

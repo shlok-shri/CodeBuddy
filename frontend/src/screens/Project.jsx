@@ -153,7 +153,7 @@ const ProjectUI = () => {
   const addCollaborators = () => {
     const arr = Array.from(selectedUserId);
     axios
-      .put('/projects/add-user', { projectId, users: arr })
+      .put('/projects/add-user', { projectId, users: arr }, { withCredentials: true })
       .then(() => axios.get(`/projects/${projectId}`))
       .then(res => {
         setProject(res.data.project);
@@ -176,7 +176,7 @@ const ProjectUI = () => {
       const response = await axios.put('/projects/update-fileTree', {
         projectId: project._id,
         fileTree: ft
-      });
+      }, { withCredentials: true });
 
       console.log('✅ File tree saved successfully:', response.data);
       setLastSaved(new Date().toLocaleTimeString());
@@ -212,7 +212,7 @@ const ProjectUI = () => {
   }, [currentFile, fileTree, debouncedSave]);
 
   useEffect(() => {
-    axios.get(`/projects/${projectId}`).then(res => {
+    axios.get(`/projects/${projectId}`, { withCredentials: true }).then(res => {
       setProject(res.data.project);
       console.log('Loaded project:', res.data.project);
 
@@ -224,7 +224,7 @@ const ProjectUI = () => {
       }
     }).catch(console.error);
 
-    axios.get('/users/all').then(res => setUsers(res.data.users)).catch(console.error);
+    axios.get('/users/all', { withCredentials: true }).then(res => setUsers(res.data.users)).catch(console.error);
   }, [projectId]);
 
   useEffect(() => {

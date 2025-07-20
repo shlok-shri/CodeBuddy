@@ -20,7 +20,8 @@ const Login = () => {
       .post('/users/login', {
         email,
         password,
-      })
+      },
+      { withCredentials: true })
       .then((res) => {
         console.log(res.data);
         const { token, user } = res.data;
