@@ -10,7 +10,7 @@ import aiRoutes from './routes/ai.routes.js'
 connect()
 const app = express()
 
-const allowedOrigins = ['https://code-buddy-client.vercel.app', 'http://localhost:5173'];
+const allowedOrigins = ['https://codebuddy-1-0q7c.onrender.com', 'http://localhost:5173'];
 
 app.use(cors({
   origin: allowedOrigins,
