@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 let axiosInstance = axios.create({
-    baseURL: import.meta.env.REACT_APP_API_URL,
+    baseURL: import.meta.env.VITE_API_URL,
 });
 
 // Always get the latest token from localStorage before each request
