@@ -19,44 +19,39 @@
 
 ### 1️⃣ Clone the repo
 
-```bash```
-git clone https://github.com/<your-username>/zen-space.git
-cd zen-space
+```git clone https://github.com/<your-username>/zen-space.git```
+```cd zen-space```
 
 2️⃣ Install dependencies
-bash
-Copy
-Edit
+
 # For backend
-cd backend
-npm install
+```cd backend```
+```npm install```
 
 # For frontend
-cd ../frontend
-npm install
+```cd ../frontend```
+```npm install```
 
 3️⃣ Setup environment variables
 🌱 Create a .env file in both backend/ and frontend/ if needed.
 Backend (example)
 
-env
-Copy
-Edit
-PORT=5000
-GEMINI_CREDS_BASE64=your_base64_encoded_google_creds
+.env
+
+```PORT=5000```
+```GEMINI_CREDS_BASE64=your_base64_encoded_google_creds```
 
 🚀 Running the App
 🖥 Backend (Node + Gemini)
 
-```bash```
+```cd backend```
+```node index.js```
 
-cd backend
-node index.js
+
 🌐 Frontend (React)
 
-```bash```
-cd frontend
-npm run dev
+```cd frontend```
+```npm run dev```
 
 🧠 Tech Stack
 🔗 Frontend: React, TailwindCSS, Vite
@@ -91,9 +86,6 @@ Node.js
 📬 Contact
 Built by Shlok S Shrikhande.
 Feel free to open issues or suggestions in the Issues tab.
-
-yaml
----
 
 ### Want Extras?
 
